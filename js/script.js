@@ -8,7 +8,8 @@ $(document).ready(function () {
 
         var toAdd = $('.todo-input').val();
 
-        if (toAdd !== '') {
+        if (toAdd.trim() !== '') {
+            toAdd = toAdd.replace(/</g, "&lt;");
             var bgColor = $('.color-item:checked').val();
             var containerElement = '<div class="checkbox-container"><input class="todo-checkbox" type="checkbox"></div>';
             var spanElement = '<span class="todo-text">' + toAdd +'</span>';
@@ -18,15 +19,17 @@ $(document).ready(function () {
             $('.todo-task:last-child .todo-text').css('background-color', bgColor);
 
             $('.todo-input').val('');
+        } else {
+            $('.todo-input').val('');
         }
     });
 
     $(document).on('click','.todo-checkbox', function(e) {
 
         if (e.target.checked === true) {
-            $('.todo-text').addClass('done');
+            $(this).parent().next('.todo-text').addClass('done');
         } else {
-            $('.todo-text').removeClass('done');
+            $(this).parent().next('.todo-text').removeClass('done');
         }
     });
 });
