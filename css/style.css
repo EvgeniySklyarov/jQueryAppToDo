@@ -27,6 +27,10 @@ body {
     border-radius: 3px;
 }
 
+.todo-btn:hover {
+    cursor: pointer;
+}
+
 .todo-input {
     border: none;
     font-size: 24px;
@@ -49,6 +53,10 @@ body {
     width: 25px;
     height: 25px;
     border-radius: 5px;
+}
+
+.color-label:hover {
+    cursor: pointer;
 }
 
 .color-label_red {
@@ -76,9 +84,9 @@ body {
 }
 
 .color-item:checked + .color-label {
-    border: 1px solid black;
-    width: 23px;
-    height: 23px;
+    border: 2px solid black;
+    width: 21px;
+    height: 21px;
 }
 
 .todo-list {
