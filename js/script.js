@@ -17,8 +17,8 @@ $(document).ready(function () {
     };
 
     var randomCheckColor = function (colorList) {
-        var randomIndex = Math.round(Math.random() * colorList.length);
-
+        var randomIndex = Math.round(Math.random() * (colorList.length - 1));
+        console.log('colorList[randomIndex]',randomIndex);
         return colorList[randomIndex].value;
     };
 
