@@ -109,6 +109,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    flex-shrink: 0;
 }
 
 .todo-text {
@@ -117,6 +118,8 @@ body {
     border-radius: 5px;
     padding: 10px 25px;
     color: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .done {
